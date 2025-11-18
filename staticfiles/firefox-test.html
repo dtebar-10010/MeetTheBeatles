@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Firefox Detection Test for MTB v5 — verifies Firefox-specific CSS loading and 4K display optimizations.">
+    <meta name="keywords" content="Firefox, CSS, firefox fixes, 4K, MTB v5, browser detection, frontend test">
+    <title>Firefox Detection Test - MTB v5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .info-box {
+            background: white;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        .warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        .info {
+            background: #d1ecf1;
+            border-color: #17a2b8;
+            color: #0c5460;
+        }
+        h1 { color: #333; }
+        h2 { color: #666; margin-top: 0; }
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .test-result {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        ul { line-height: 1.8; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Firefox Detection Test</h1>
+    <p>This page tests if Firefox-specific CSS fixes are being loaded correctly for your MTV Beatles project.</p>
+
+    <div id="browser-detection" class="info-box">
+        <h2>🌐 Browser Detection</h2>
+        <p class="test-result">Detecting browser...</p>
+    </div>
+
+    <div id="screen-info" class="info-box info">
+        <h2>📺 Screen Information</h2>
+        <ul id="screen-details">
+            <li>Loading screen information...</li>
+        </ul>
+    </div>
+
+    <div id="css-status" class="info-box">
+        <h2>🎨 CSS Loading Status</h2>
+        <p id="css-info">Checking CSS files...</p>
+    </div>
+
+    <div class="info-box warning">
+        <h2>✅ What Should Happen</h2>
+        <ul>
+            <li><strong>In Firefox:</strong> <code>firefox-fixes.css</code> should load automatically</li>
+            <li><strong>In Chrome:</strong> Only default styles, no Firefox CSS</li>
+            <li><strong>4K Display (3840x2160):</strong> Special optimizations applied</li>
+        </ul>
+    </div>
+
+    <div class="info-box info">
+        <h2>📝 Implementation Details</h2>
+        <ul>
+            <li><strong>JavaScript Loader:</strong> <code>static/js/firefox-loader.js</code></li>
+            <li><strong>Firefox CSS:</strong> <code>static/css/firefox-fixes.css</code></li>
+            <li><strong>Modified Files:</strong> 
+                <ul>
+                    <li><code>templates/base.html</code> - Added loader script</li>
+                    <li><code>static/css/historyContainer.css</code> - Firefox scrollbar</li>
+                    <li><code>static/css/stackedCards.css</code> - Firefox video fixes</li>
+                    <li><code>static/css/main.css</code> - Button appearance</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // Browser detection
+        function isFirefox() {
+            return typeof InstallTrigger !== 'undefined' || 
+                   navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+        }
+
+        function isChrome() {
+            return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        }
+
+        // Update browser detection box
+        const browserBox = document.getElementById('browser-detection');
+        const browserResult = browserBox.querySelector('.test-result');
+        
+        if (isFirefox()) {
+            browserBox.className = 'info-box success';
+            browserResult.innerHTML = '✅ <strong>Firefox Detected!</strong><br>' +
+                'Firefox-specific CSS fixes will be loaded automatically.';
+        } else if (isChrome()) {
+            browserBox.className = 'info-box warning';
+            browserResult.innerHTML = '🌐 <strong>Chrome Detected</strong><br>' +
+                'Using default Chrome styles (Firefox CSS will NOT load).';
+        } else {
+            browserBox.className = 'info-box info';
+            browserResult.innerHTML = '🌐 <strong>Other Browser Detected</strong><br>' +
+                'Browser: ' + navigator.userAgent.split(' ').pop();
+        }
+
+        // Screen information
+        const screenDetails = document.getElementById('screen-details');
+        const screenInfo = {
+            resolution: `${window.screen.width} × ${window.screen.height}`,
+            availableArea: `${window.screen.availWidth} × ${window.screen.availHeight}`,
+            pixelRatio: window.devicePixelRatio || 1,
+            colorDepth: window.screen.colorDepth + '-bit',
+            orientation: window.screen.width > window.screen.height ? 'Landscape' : 'Portrait'
+        };
+
+        let is4K = window.screen.width >= 3840 && window.screen.height >= 2160;
+        
+        screenDetails.innerHTML = '';
+        for (let [key, value] of Object.entries(screenInfo)) {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}:</strong> ${value}`;
+            screenDetails.appendChild(li);
+        }
+
+        if (is4K) {
+            const li = document.createElement('li');
+            li.innerHTML = '<strong style="color: #28a745;">🎯 4K Display Detected!</strong> (3840×2160 optimizations active)';
+            screenDetails.appendChild(li);
+        }
+
+        // CSS loading status
+        const cssStatus = document.getElementById('css-status');
+        const cssInfo = document.getElementById('css-info');
+        
+        setTimeout(() => {
+            const firefoxCSS = document.getElementById('firefox-fixes-css');
+            const bodyDataBrowser = document.body.getAttribute('data-browser');
+            
+            if (firefoxCSS && bodyDataBrowser === 'firefox') {
+                cssStatus.className = 'info-box success';
+                cssInfo.innerHTML = '✅ <strong>Firefox CSS Loaded Successfully!</strong><br>' +
+                    'File: <code>firefox-fixes.css</code> is active.<br>' +
+                    'Body attribute: <code>data-browser="firefox"</code>';
+            } else if (isFirefox()) {
+                cssStatus.className = 'info-box warning';
+                cssInfo.innerHTML = '⚠️ <strong>Firefox detected but CSS not loaded yet</strong><br>' +
+                    'The loader script should run on the actual application pages.';
+            } else {
+                cssStatus.className = 'info-box success';
+                cssInfo.innerHTML = '✅ <strong>Correct Behavior</strong><br>' +
+                    'Non-Firefox browser detected - Firefox CSS correctly not loaded.';
+            }
+        }, 500);
+
+        // Console output
+        console.log('=== Firefox Detection Test ===');
+        console.log('Browser:', isFirefox() ? 'Firefox' : (isChrome() ? 'Chrome' : 'Other'));
+        console.log('Screen:', screenInfo);
+        console.log('4K Display:', is4K);
+    </script>
+</body>
+</html>

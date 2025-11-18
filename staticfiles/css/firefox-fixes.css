@@ -1,0 +1,721 @@
+/* =============================
+   FIREFOX-SPECIFIC FIXES
+   Addresses display idiosyncrasies in Mozilla Firefox
+   without affecting Chrome behavior
+   ============================= */
+
+/* =============================
+   FIREFOX DETECTION & BASE FIXES
+   ============================= */
+
+/* Firefox scrollbar styling (alternative to ::-webkit-scrollbar) */
+@-moz-document url-prefix()
+{
+  .text-container
+  {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  .text-container:hover
+  {
+    scrollbar-color: #555 #f1f1f1;
+  }
+}
+
+/* Firefox-specific appearance reset */
+@supports (-moz-appearance: none)
+{
+
+  .btn-primary,
+  a.btn.btn-primary
+  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  button,
+  input[type="button"],
+  input[type="submit"]
+  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+/* =============================
+   4K RESOLUTION (3840 x 2160)
+   FIREFOX-SPECIFIC OPTIMIZATIONS
+   ============================= */
+
+@media (min-width: 3840px) and (min-height: 2160px)
+{
+
+  /* Firefox handles transform calculations slightly differently at 4K */
+  @-moz-document url-prefix()
+  {
+    .stacked-cards
+    {
+      /* Firefox vertical positioning - 7cm down from center */
+      display: flex !important;
+      justify-content: center !important; /* Vertically centered */
+      align-items: center !important; /* Horizontally centered */
+      min-height: 100vh !important; /* Full viewport height */
+      padding-top: 7cm !important; /* Move down 7cm */
+      box-sizing: border-box !important;
+    }
+
+    /* Firefox flexbox rendering at 4K */
+    .stacked-cards ul
+    {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+
+    /* Firefox video aspect-ratio handling at 4K */
+    .stacked-cards li
+    {
+      /* Ensure proper aspect ratio in Firefox */
+      position: relative;
+      width: 33% !important;
+    }
+
+    /* Firefox video rendering optimization */
+    .stacked-cards li video
+    {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Firefox border-radius with overflow at 4K */
+    .stacked-cards li.slide
+    {
+      border-radius: 10px;
+      overflow: hidden;
+      /* Firefox sometimes needs explicit will-change for smooth rendering */
+      will-change: transform;
+    }
+
+    /* Firefox text container scrollbar at 4K */
+    .text-container
+    {
+      /* Ensure smooth scrolling in Firefox */
+      scroll-behavior: smooth;
+    }
+
+    /* Firefox button rendering at 4K */
+    #phase-selection-container .btn-group .btn
+    {
+      /* Firefox may render button text differently at high DPI */
+      text-rendering: optimizeLegibility;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Firefox - Reduce font size for first 4 phase buttons by 50% using nth-child */
+    #phase-selection-container .btn-group .btn:nth-child(1),
+    #phase-selection-container .btn-group .btn:nth-child(2),
+    #phase-selection-container .btn-group .btn:nth-child(3),
+    #phase-selection-container .btn-group .btn:nth-child(4)
+    {
+      font-size: 8.5px !important; /* 50% of 17px */
+    }
+
+    /* Firefox - Keep 5th button (Karaokes) at original size */
+    #phase-selection-container .btn-group .btn:nth-child(5)
+    {
+      font-size: 17px !important; /* Original size - explicit override */
+    }
+
+    /* Firefox transform precision at 4K */
+    .header-title
+    {
+      /* Firefox transform centering at high resolution */
+      transform: translateX(-50%);
+      left: 50%;
+    }
+
+    /* Firefox video poster handling */
+    video[poster]
+    {
+      object-fit: cover;
+      background-size: cover;
+    }
+
+    /* Firefox border color transitions */
+    .stacked-cards li.slide,
+    .text-container
+    {
+      /* Firefox handles transitions slightly differently */
+      transition: border-color 0.5s ease-in-out, transform 0.5s ease;
+    }
+
+    /* Firefox phase-specific borders - ensure proper rendering */
+    body[data-phase="01"] .stacked-cards li.slide
+    {
+      border-color: #000000;
+      border-style: solid;
+      border-width: 3px;
+    }
+
+    body[data-phase="02"] .stacked-cards li.slide
+    {
+      border-color: #000080;
+      border-style: solid;
+      border-width: 3px;
+    }
+
+    body[data-phase="03"] .stacked-cards li.slide
+    {
+      border-color: #800080;
+      border-style: solid;
+      border-width: 3px;
+    }
+
+    body[data-phase="04"] .stacked-cards li.slide
+    {
+      border-color: #808080;
+      border-style: solid;
+      border-width: 3px;
+    }
+
+    body[data-phase="05"] .stacked-cards li.slide
+    {
+      border-color: #FFFFFF;
+      border-style: solid;
+      border-width: 3px;
+    }
+
+    /* Firefox text shadow rendering at 4K */
+    .header-title
+    {
+      /* Firefox may render text-shadow differently at high DPI */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+        -1px -1px 2px rgba(255, 255, 255, 0.3);
+    }
+
+    .overlay
+    {
+      /* Ensure overlay text is crisp in Firefox at 4K */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9),
+        -1px -1px 2px rgba(0, 0, 0, 0.9),
+        1px -1px 2px rgba(0, 0, 0, 0.9),
+        -1px 1px 2px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Firefox box-shadow rendering at 4K */
+    .text-container
+    {
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .stacked-cards li
+    {
+      box-shadow: 0 0.2rem 0.5rem 0px #333;
+    }
+
+    /* Firefox background-size at 4K */
+    html,
+    body
+    {
+      background-size: cover;
+      background-position: center;
+      /* Firefox specific background rendering */
+      background-attachment: fixed;
+    }
+
+    /* Firefox font rendering at 4K */
+    @font-face
+    {
+      font-family: 'Bootle';
+      src: url('../fonts/Bootle-4B9l.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      /* Firefox font rendering optimization */
+      font-display: swap;
+    }
+
+    /* Firefox subpixel rendering at high DPI */
+    *
+    {
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Firefox flex gap fallback (if needed for older versions) */
+    #phase-selection-container .btn-group
+    {
+      gap: 11px;
+      /* Fallback for older Firefox versions */
+    }
+
+    /* Firefox video controls styling at 4K */
+    .stacked-cards li video::-moz-media-controls
+    {
+      /* Ensure controls are properly sized at 4K */
+      font-size: 16px;
+    }
+
+    /* Firefox selection highlighting */
+    ::selection
+    {
+      background-color: rgba(100, 100, 200, 0.3);
+      color: inherit;
+    }
+
+    ::-moz-selection
+    {
+      background-color: rgba(100, 100, 200, 0.3);
+      color: inherit;
+    }
+
+    /* Firefox specific z-index stacking at 4K */
+    .text-container
+    {
+      position: relative;
+      z-index: 100;
+    }
+
+    .overlay
+    {
+      position: absolute;
+      z-index: 10;
+    }
+
+    .stacked-cards li.active
+    {
+      z-index: 10;
+    }
+
+    /* Firefox border-box consistency at 4K */
+    *,
+    *:before,
+    *:after
+    {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+  }
+}
+
+/* =============================
+   FIREFOX FLEXBOX FIXES
+   For consistent centering across all resolutions
+   ============================= */
+
+@supports (-moz-appearance: none)
+{
+  .stacked-cards
+  {
+    /* Firefox sometimes needs explicit flex properties */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .stacked-cards ul
+  {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* =============================
+   FIREFOX VIDEO ELEMENT FIXES
+   ============================= */
+
+@-moz-document url-prefix()
+{
+
+  /* Firefox video poster rendering */
+  video
+  {
+    background-color: transparent;
+    object-fit: cover;
+  }
+
+  video[poster]
+  {
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Firefox video container */
+  .video-container
+  {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-container video
+  {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* =============================
+   FIREFOX TRANSFORM PRECISION
+   ============================= */
+
+@supports (-moz-appearance: none)
+{
+
+  /* Firefox handles translateX/translateY with higher precision */
+  .header-title
+  {
+    left: 50%;
+    transform: translateX(-50%);
+    /* Ensure crisp rendering */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+  .stacked-cards li
+  {
+    left: 50%;
+    transform: translateX(-50%);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+  #phase-selection-container
+  {
+    left: 50%;
+    transform: translateX(-50%);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+}
+
+/* =============================
+   FIREFOX OVERFLOW & CLIPPING
+   ============================= */
+
+@-moz-document url-prefix()
+{
+
+  /* Firefox border-radius with overflow */
+  .stacked-cards li
+  {
+    overflow: hidden;
+    /* Firefox specific clipping */
+    -moz-background-clip: padding-box;
+    /* Added standard and WebKit-prefixed properties for compatibility */
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -moz-border-radius: 0.5rem;
+    /* Standard border-radius for compatibility */
+    border-radius: 0.5rem;
+  }
+
+  .text-container
+  {
+    overflow-y: scroll;
+    /* Firefox scrollbar always visible if needed */
+    scrollbar-width: thin;
+  }
+
+  /* Firefox body overflow */
+  html,
+  body
+  {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+}
+
+/* =============================
+   FIREFOX BUTTON APPEARANCE
+   ============================= */
+
+@supports (-moz-appearance: none)
+{
+
+  button,
+  .btn,
+  .btn-primary,
+  a.btn.btn-primary
+  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Firefox button padding fix */
+    padding: 0.3em;
+    box-sizing: border-box;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    /* Firefox text centering in buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Firefox - Reduce font size for first 4 phase buttons by 70% (all resolutions) */
+  #phase-selection-container .btn-group .btn:nth-child(1),
+  #phase-selection-container .btn-group .btn:nth-child(2),
+  #phase-selection-container .btn-group .btn:nth-child(3),
+  #phase-selection-container .btn-group .btn:nth-child(4)
+  {
+    font-size: 5.1px !important; /* 30% of 17px (70% reduction) */
+  }
+
+  /* Firefox - Keep 5th button (Karaokes) at original size (all resolutions) */
+  #phase-selection-container .btn-group .btn:nth-child(5)
+  {
+    font-size: 17px !important; /* Original size */
+  }
+}
+
+/* =============================
+   FIREFOX COLOR CONSISTENCY
+   ============================= */
+
+@-moz-document url-prefix()
+{
+
+  /* Ensure phase colors render identically in Firefox */
+  .phase-01 .text-container
+  {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: #fff;
+  }
+
+  .phase-02 .text-container
+  {
+    background-color: rgba(30, 30, 90, 0.8);
+    color: #fff;
+  }
+
+  .phase-03 .text-container
+  {
+    background-color: rgba(70, 30, 70, 0.8);
+    color: #fff;
+  }
+
+  .phase-04 .text-container
+  {
+    background-color: rgba(120, 120, 120, 0.8);
+    color: #fff;
+  }
+
+  .phase-05 .text-container
+  {
+    background-color: rgba(230, 230, 230, 0.8);
+    color: #000;
+  }
+}
+
+/* =============================
+   FIREFOX LANDSCAPE MEDIA QUERIES
+   Common landscape orientations with consistent layout
+   ============================= */
+
+/* 1920x1080 Full HD - Most common desktop/laptop */
+@media (max-width: 1920px) and (orientation: landscape) {
+  @-moz-document url-prefix() {
+    .stacked-cards {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      min-height: 100vh !important;
+      padding-top: 7cm !important;
+      box-sizing: border-box !important;
+    }
+    
+    /* Smaller font for first 4 phase buttons */
+    #phase-selection-container .btn-group .btn:nth-child(1),
+    #phase-selection-container .btn-group .btn:nth-child(2),
+    #phase-selection-container .btn-group .btn:nth-child(3),
+    #phase-selection-container .btn-group .btn:nth-child(4) {
+      font-size: 8.5px !important;
+    }
+    
+    #phase-selection-container .btn-group .btn:nth-child(5) {
+      font-size: 17px !important;
+    }
+  }
+}
+
+/* 1366x768 - Common laptop resolution */
+@media (max-width: 1366px) and (orientation: landscape) {
+  @-moz-document url-prefix() {
+    .stacked-cards {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      min-height: 100vh !important;
+      padding-top: 3cm !important;
+      box-sizing: border-box !important;
+    }
+    
+    /* Original is 10px, 70% reduction = 3px (30% remaining) */
+    #phase-selection-container .btn-group .btn:nth-child(1),
+    #phase-selection-container .btn-group .btn:nth-child(2),
+    #phase-selection-container .btn-group .btn:nth-child(3),
+    #phase-selection-container .btn-group .btn:nth-child(4) {
+      font-size: 3px !important;
+    }
+    
+    #phase-selection-container .btn-group .btn:nth-child(5) {
+      font-size: 10px !important;
+    }
+  }
+}
+
+/* 1200px and below - Large tablets landscape */
+@media (max-width: 1200px) and (orientation: landscape) {
+  @-moz-document url-prefix() {
+    .stacked-cards {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      min-height: 100vh !important;
+      padding-top: 7cm !important;
+      box-sizing: border-box !important;
+    }
+    
+    /* Original is 17px, 70% reduction = 5.1px (30% remaining) */
+    #phase-selection-container .btn-group .btn:nth-child(1),
+    #phase-selection-container .btn-group .btn:nth-child(2),
+    #phase-selection-container .btn-group .btn:nth-child(3),
+    #phase-selection-container .btn-group .btn:nth-child(4) {
+      font-size: 5.1px !important;
+    }
+    
+    #phase-selection-container .btn-group .btn:nth-child(5) {
+      font-size: 17px !important;
+    }
+  }
+}
+
+/* 992px and below - Medium tablets landscape */
+@media (max-width: 992px) and (orientation: landscape) {
+  @-moz-document url-prefix() {
+    .stacked-cards {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      min-height: 100vh !important;
+      padding-top: 7cm !important;
+      box-sizing: border-box !important;
+    }
+    
+    /* Original is 15px, 70% reduction = 4.5px (30% remaining) */
+    #phase-selection-container .btn-group .btn:nth-child(1),
+    #phase-selection-container .btn-group .btn:nth-child(2),
+    #phase-selection-container .btn-group .btn:nth-child(3),
+    #phase-selection-container .btn-group .btn:nth-child(4) {
+      font-size: 4.5px !important;
+    }
+    
+    #phase-selection-container .btn-group .btn:nth-child(5) {
+      font-size: 15px !important;
+    }
+  }
+}
+
+/* 915px and below - Custom landscape breakpoint for phase buttons */
+@media (max-width: 915px) and (orientation: landscape) {
+  @-moz-document url-prefix() {
+    .stacked-cards {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      min-height: 100vh !important;
+      padding-top: 6cm !important;
+      box-sizing: border-box !important;
+    }
+  }
+}
+
+/* 768px and below - Small tablets landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+  @-moz-document url-prefix() {
+    .stacked-cards {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      min-height: 100vh !important;
+      padding-top: 5cm !important; /* Less padding for smaller screens */
+      box-sizing: border-box !important;
+    }
+    
+    /* Original is 12px, 70% reduction = 3.6px (30% remaining) */
+    #phase-selection-container .btn-group .btn:nth-child(1),
+    #phase-selection-container .btn-group .btn:nth-child(2),
+    #phase-selection-container .btn-group .btn:nth-child(3),
+    #phase-selection-container .btn-group .btn:nth-child(4) {
+      font-size: 3.6px !important;
+    }
+    
+    #phase-selection-container .btn-group .btn:nth-child(5) {
+      font-size: 12px !important;
+    }
+  }
+}
+
+/* 667px and below - iPhone Plus landscape */
+@media (max-width: 667px) and (orientation: landscape) {
+  @-moz-document url-prefix() {
+    .stacked-cards {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      min-height: 100vh !important;
+      padding-top: 3cm !important;
+      box-sizing: border-box !important;
+    }
+    
+    /* Original is 17px, 70% reduction = 5.1px (30% remaining) */
+    #phase-selection-container .btn-group .btn:nth-child(1),
+    #phase-selection-container .btn-group .btn:nth-child(2),
+    #phase-selection-container .btn-group .btn:nth-child(3),
+    #phase-selection-container .btn-group .btn:nth-child(4) {
+      font-size: 5.1px !important;
+    }
+    
+    #phase-selection-container .btn-group .btn:nth-child(5) {
+      font-size: 17px !important;
+    }
+  }
+}
+
+/* 915px and below - Custom landscape breakpoint for phase buttons (moved below 768px for cascade) */
+@media (max-width: 915px) and (orientation: landscape) {
+  @-moz-document url-prefix() {
+    .stacked-cards {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      min-height: 100vh !important;
+      padding-top: 6cm !important;
+      box-sizing: border-box !important;
+    }
+  }
+}
+
+/* =============================
+   END OF FIREFOX FIXES
+   ============================= */

@@ -1,0 +1,1384 @@
+/*@media (min-width : 2176px) and (orientation : landscape) {*/
+/* .overlay {*/
+/*  top           : 2px;*/
+/*  left          : 3px;*/
+/*  padding       : 2px;*/
+/*  border-radius : 2px;*/
+/*  z-index       : 2;*/
+/*  font-size     : xx-small !important;*/
+/* }*/
+
+/* !*.stacked-cards {*!*/
+/* !* margin      : 0 !important;*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 20.0% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      :100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-0%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : 1024!important;*/
+/* }*/
+
+/* .header-title {*/
+/*  font-size     : 6.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  max-height    : 350px !important;*/
+/*  min-height    : 350px !important;*/
+/*  border        : 9px solid transparent;*/
+/*  padding       : 7px;*/
+/*  overflow-y    : auto;*/
+/*  font-size     : 24px !important;*/
+/*  border-radius : 9px;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 63.00% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 126px !important;*/
+/*  height    : 45px !important;*/
+/*  padding   : 0;*/
+/*  font-size : 21px !important;*/
+/* }*/
+/*}*/
+
+/*@media (min-width : 1366px) and (orientation : landscape) {*/
+/* .overlay {*/
+/*  top           : 2px;*/
+/*  left          : 3px;*/
+/*  padding       : 2px;*/
+/*  border-radius : 2px;*/
+/*  z-index       : 2;*/
+/*  font-size     : xx-small !important;*/
+/* }*/
+
+/* !*.stacked-cards {*!*/
+/* !* margin      : 0 !important;*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 20.0% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 1000px !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  font-size     : 6.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  max-height    : 150px !important;*/
+/*  min-height    : 150px !important;*/
+/*  border        : 9px solid transparent;*/
+/*  padding       : 7px;*/
+/*  overflow-y    : auto;*/
+/*  font-size     : 24px !important;*/
+/*  border-radius : 9px;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 63.00% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 126px !important;*/
+/*  height    : 45px !important;*/
+/*  padding   : 0;*/
+/*  font-size : 21px !important;*/
+/* }*/
+/*}*/
+
+/*@media (min-width : 1024px) and (orientation : landscape) {*/
+/* .overlay {*/
+/*  top           : 2px;*/
+/*  left          : 3px;*/
+/*  padding       : 2px;*/
+/*  border-radius : 2px;*/
+/*  z-index       : 2;*/
+/*  font-size     : xx-small !important;*/
+/* }*/
+
+/* !*.stacked-cards {*!*/
+/* !* margin      : 0 !important;*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 20.0% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  font-size     : 6.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  max-height    : 150px !important;*/
+/*  min-height    : 150px !important;*/
+/*  border        : 9px solid transparent;*/
+/*  padding       : 7px;*/
+/*  overflow-y    : auto;*/
+/*  font-size     : 24px !important;*/
+/*  border-radius : 9px;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 63.00% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 126px !important;*/
+/*  height    : 45px !important;*/
+/*  padding   : 0;*/
+/*  font-size : 21px !important;*/
+/* }*/
+/*}*/
+/*@media (max-width : 932px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 12% !important;*!*/
+/* !* display         : flex !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 63px !important;*/
+/*  min-height    : 63px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 73% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/*  font-size : x-small !important;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 896px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 12% !important;*!*/
+/* !* display         : flex !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 63px !important;*/
+/*  min-height    : 63px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 73% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/*  font-size : x-small !important;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 882px) and (orientation : landscape) {*/
+/* !* .stacked-cards {*!*/
+/* !*  position        : absolute;*!*/
+/* !*  top             : 12.5% !important;*!*/
+/* !*  display         : flex !important;*!*/
+/* !*  justify-content : center !important;*!*/
+/* !*  align-items     : flex-start !important;*!*/
+/* !*  width           : 100%;*!*/
+/* !* }*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 2.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 43px !important;*/
+/*  min-height    : 43px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 75.33% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/*  font-size : x-small !important;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 823px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 12% !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-2%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 83px !important;*/
+/*  min-height    : 83px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : small !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 280px !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  font-size : x-small !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 812px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 13% !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-2%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 3.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 63px !important;*/
+/*  min-height    : 63px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 265px !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  font-size : x-small !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 786px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 10.5% !important;*!*/
+/* !* display         : flex !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 63px !important;*/
+/*  min-height    : 63px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 69% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/*  font-size : x-small !important;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 745px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 17% !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !* margin-top      : 0 !important;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-1%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 63px !important;*/
+/*  min-height    : 63px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 252px !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  font-size : x-small !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 740px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 17% !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !* margin-top      : 0 !important;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-1%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 63px !important;*/
+/*  min-height    : 63px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 252px !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  font-size : x-small !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 736px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 17.50% !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-0%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 87px !important;*/
+/*  min-height    : 87px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 270px !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  font-size : x-small !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 731px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 14% !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(1%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 100px !important;*/
+/*  min-height    : 100px !important;*/
+/*  border        : 7px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 263px !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  font-size : x-small !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 720px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 17.50% !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 123px !important;*/
+/*  min-height    : 123px !important;*/
+/*  border        : 7px solid transparent;*/
+/*  font-size     : small !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 350px !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  font-size : x-small !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 667px) and (orientation : landscape) {*/
+/* .overlay {*/
+/*  top           : 2px;*/
+/*  left          : 3px;*/
+/*  padding       : 2px;*/
+/*  border-radius : 2px;*/
+/*  z-index       : 2;*/
+/*  font-size     : xx-small !important;*/
+/* }*/
+
+/* !*.stacked-cards {*!*/
+/* !* margin      : 0 !important;*!*/
+/* !* position    : absolute;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !* margin-top  : -10px !important;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-9%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3%;*/
+/*  font-size     : 4vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 58px !important;*/
+/*  min-height    : 58px !important;*/
+/*  border        : 2px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : -7px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 69.00% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/*  font-size : 9px !important;*/
+/* }*/
+
+/* .text-container p{*/
+/*  font-size     : 6px !important;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 658px) and (orientation : landscape) {*/
+/* .overlay {*/
+/*  top           : 2px;*/
+/*  left          : 3px;*/
+/*  padding       : 2px;*/
+/*  border-radius : 2px;*/
+/*  z-index       : 2;*/
+/*  font-size     : xx-small !important;*/
+/* }*/
+
+/* !*.stacked-cards {*!*/
+/* !* margin      : 0 !important;*!*/
+/* !* position    : absolute;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !* margin-top  : -10px !important;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-10%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 2%;*/
+/*  font-size     : 3.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 58px !important;*/
+/*  min-height    : 58px !important;*/
+/*  border        : 2px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : -7px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 67.00% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/*  font-size : 9px !important;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 640px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 19% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-0%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 72px !important;*/
+/*  min-height    : 72px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 62% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width   : 72px !important;*/
+/*  height  : 20px !important;*/
+/*  padding : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 568px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 19% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(2%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 420px;*/
+/*  max-width     : 420px;*/
+/*  max-height    : 72px !important;*/
+/*  min-height    : 72px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 61.3% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width   : 72px !important;*/
+/*  height  : 20px !important;*/
+/*  padding : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 480px) and (orientation : landscape) {*/
+/* !*.stacked-cards {*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 19% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(2%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 420px;*/
+/*  max-width     : 420px;*/
+/*  max-height    : 72px !important;*/
+/*  min-height    : 72px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 61.3% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width   : 72px !important;*/
+/*  height  : 20px !important;*/
+/*  padding : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*!*Portrait*!*/
+/*@media (max-width : 712px) and (orientation : portrait) {*/
+/* !*.stacked-cards {*!*/
+/* !* position        : absolute;*!*/
+/* !* top             : 17.50% !important;*!*/
+/* !* justify-content : center !important;*!*/
+/* !* align-items     : flex-start !important;*!*/
+/* !* width           : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  font-size     : 4.5vw;*/
+/*  margin-bottom : 0;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 520px;*/
+/*  max-width     : 520px;*/
+/*  max-height    : 123px !important;*/
+/*  min-height    : 123px !important;*/
+/*  border        : 7px solid transparent;*/
+/*  font-size     : small !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 450px !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 72px !important;*/
+/*  height    : 20px !important;*/
+/*  font-size : x-small !important;*/
+/*  padding   : 0.1em 0.5em;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 430px) and (orientation : portrait) {*/
+/* !*.stacked-cards {*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 19% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  margin-bottom : 0;*/
+/*  font-size     : xx-large;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 333px;*/
+/*  max-width     : 333px;*/
+/*  max-height    : 72px !important;*/
+/*  min-height    : 72px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/*  margin-bottom : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 61.3% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 54px !important;*/
+/*  height    : 20px !important;*/
+/*  padding   : 0.0em;*/
+/*  font-size : small;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 414px) and (orientation : portrait) {*/
+/* !*.stacked-cards {*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 19% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  margin-bottom : 0;*/
+/*  font-size     : xx-large;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 333px;*/
+/*  max-width     : 333px;*/
+/*  max-height    : 72px !important;*/
+/*  min-height    : 72px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/*  margin-bottom : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 61.3% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 54px !important;*/
+/*  height    : 20px !important;*/
+/*  padding   : 0.0em;*/
+/*  font-size : small;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 393px) and (orientation : portrait) {*/
+/* !*.stacked-cards {*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 19% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  margin-bottom : 0;*/
+/*  font-size     : xx-large;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 333px;*/
+/*  max-width     : 333px;*/
+/*  max-height    : 72px !important;*/
+/*  min-height    : 72px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/*  margin-bottom : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 61.3% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 54px !important;*/
+/*  height    : 20px !important;*/
+/*  padding   : 0.0em;*/
+/*  font-size : small;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 360px) and (orientation : portrait) {*/
+/* !*.stacked-cards {*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 19% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  margin-bottom : 0;*/
+/*  font-size     : xx-large;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 333px;*/
+/*  max-width     : 333px;*/
+/*  max-height    : 72px !important;*/
+/*  min-height    : 72px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/*  margin-bottom : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 61.3% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 54px !important;*/
+/*  height    : 20px !important;*/
+/*  padding   : 0.0em;*/
+/*  font-size : small;*/
+/* }*/
+/*}*/
+
+/*@media (max-width : 320px) and (orientation : portrait) {*/
+/* !*.stacked-cards {*!*/
+/* !* position    : absolute;*!*/
+/* !* top         : 19% !important;*!*/
+/* !* align-items : flex-start !important;*!*/
+/* !* width       : 100%;*!*/
+/* !*}*!*/
+/* .stacked-cards {*/
+/*  display         : flex !important;*/
+/*  justify-content : center !important;*/
+/*  align-items     : center !important;*/
+/*  min-height      : 100vh !important;*/
+/*  margin-bottom   : 3px !important;*/
+/*  transform       : translateY(-6%) !important;*/
+/* }*/
+
+/* .stacked-cards ul {*/
+/*  display        : flex !important;*/
+/*  flex-direction : column !important;*/
+/*  align-items    : center !important;*/
+/*  width          : 100% !important;*/
+/*  height         : auto !important;*/
+/* }*/
+
+/* .header-title {*/
+/*  top           : 3.3%;*/
+/*  margin-bottom : 0;*/
+/*  font-size     : xx-large;*/
+/* }*/
+
+/* .text-container {*/
+/*  width         : 290px;*/
+/*  max-width     : 290px;*/
+/*  max-height    : 72px !important;*/
+/*  min-height    : 72px !important;*/
+/*  border        : 3px solid transparent;*/
+/*  font-size     : smaller !important;*/
+/*  border-radius : 9px;*/
+/*  margin-top    : 19px !important;*/
+/*  margin-bottom : 19px !important;*/
+/* }*/
+
+/* #phase-selection-container {*/
+/*  top : 61.3% !important;*/
+/* }*/
+
+/* #phase-selection-container .btn-group .btn {*/
+/*  width     : 53px !important;*/
+/*  height    : 20px !important;*/
+/*  padding   : 0.0em;*/
+/*  font-size : smaller;*/
+/* }*/
+/*}*/
