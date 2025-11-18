@@ -101,5 +101,6 @@ border: 2px dashed red !important;
 
 .overlay {
   font-family: 'Bootle', sans-serif !important;
+  font-size: smaller !important;
 }
 
