@@ -101,6 +101,11 @@ border: 2px dashed red !important;
 
 .overlay {
   font-family: 'Bootle', sans-serif !important;
-  font-size: smaller !important;
+  font-size: 10px !important;
+  /*position: fixed  !important;*/
+  top: 3  !important;
+  left: 0 !important;
+  /*width: 100% !important;
+  height: 100% !important;*/
 }
 
