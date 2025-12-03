@@ -52,7 +52,6 @@
     z-index: 1;
     opacity: 1;
     margin: 0 auto;
-    min-width: auto;
     width: auto;
  margin-top: -9px !important;
 }
@@ -68,7 +67,8 @@
 }
 
 #phase-selection-container .btn-group .btn {
-    width: 111px; /* Set fixed width */
+    width: 95px;
+    /* Removed width, min-width, and max-width for Firefox JS fix */
     height: 35px !important; /* Keep the existing height */
     border-radius: 7px;
     color: white;

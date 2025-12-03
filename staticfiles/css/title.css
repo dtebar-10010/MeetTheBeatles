@@ -4,7 +4,7 @@
  left          : 50%;
  transform     : translateX(-50%);
  color         : white;
- font-family   : 'Bootle', sans-serif;
+ font-family   : 'Bootle', sans-serif !important;
  font-size     : 4.3vw !important;
  text-align    : center;
  width         : 100%;

@@ -25,61 +25,105 @@
     <link href="{% static 'css/historyContainer.css' %}" rel="stylesheet">
     <link href="{% static 'css/mediaQueries-v2.css' %}" rel="stylesheet">
     <link rel="icon"
-          type="image/png"
-          href="{% static 'imgs/icons/favicon.png' %}"
-          sizes="32x32">
+          type="image/x-icon"
+          href="{% static 'imgs/icons/favicon.ico' %}">
     <link rel="icon"
           type="image/png"
-          href="{% static 'imgs/icons/favicon.png' %}"
-          sizes="16x16">
-    <link rel="mask-icon" href="{% static 'imgs/icons/favicon.png' %}">
+          href="{% static 'imgs/icons/favicon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'imgs/icons/favicon.png' %}">
     <!-- Firefox-specific CSS loader - only loads firefox-fixes.css in Firefox -->
     <script src="{% static 'js/firefox-loader.js' %}"></script>
     <style>
-    @font-face {
-      font-family: 'Bootle';
-      src: url("{% static 'fonts/Bootle-4B9l.woff2' %}") format('woff2'),
-           url("{% static 'fonts/Bootle-4B9l.woff' %}") format('woff'),
-           url("{% static 'fonts/Bootle-4B9l.ttf' %}") format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-   body {
-   {% if current_phase == '01' %}
-    background-image : url('/media/01/first_era-background.jpg');
-   {% elif current_phase == '02' %}
-    background-image : url('/media/02/second_era-background.jpg');
-   {% elif current_phase == '03' %}
-    background-image : url('/media/03/third_era-background.jpg');
-   {% elif current_phase == '04' %}
-    background-image : url('/media/04/fourth_era-background.jpg');
-   {% elif current_phase == '05' %}
-    background-image : url('/media/05/fifth_era-background.jpg');
-   {% endif %}
-   }
+      @font-face {
+        font-family: 'Bootle';
+        src: url("{% static 'fonts/Bootle-4B9l.woff2' %}") format('woff2'),
+        url("{% static 'fonts/Bootle-4B9l.woff' %}") format('woff'),
+        url("{% static 'fonts/Bootle-4B9l.ttf' %}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
 
-   .stacked-cards li.slide {
-   {% if current_phase == '01' %}
-    background-color : black;
-   {% elif current_phase == '02' %}
-    background-color : navy;
-   {% elif current_phase == '03' %}
-    background-color : purple;
-   {% elif current_phase == '04' %}
-    background-color : gray;
-   {% elif current_phase == '05' %}
-    background-color : white;
-   {% endif %}
-   }
+      body {
+          {
+          % if current_phase=='01' %
+        }
 
-(function() {
-  var isChrome = /chrome/i.test(navigator.userAgent) && !/edge|edg|opr|brave/i.test(navigator.userAgent);
-  if (!isChrome) {
-    document.body.innerHTML = '<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;font-size:2em;">Please use Chrome. Other browsers soon!</div>';
-    document.body.style.overflow = 'hidden';
-  }
-  
-})();
+        background-image : url('/media/01/first_era-background.jpg');
+
+          {
+          % elif current_phase=='02' %
+        }
+
+        background-image : url('/media/02/second_era-background.jpg');
+
+          {
+          % elif current_phase=='03' %
+        }
+
+        background-image : url('/media/03/third_era-background.jpg');
+
+          {
+          % elif current_phase=='04' %
+        }
+
+        background-image : url('/media/04/fourth_era-background.jpg');
+
+          {
+          % elif current_phase=='05' %
+        }
+
+        background-image : url('/media/05/fifth_era-background.jpg');
+
+          {
+          % endif %
+        }
+      }
+
+      .stacked-cards li.slide {
+          {
+          % if current_phase=='01' %
+        }
+
+        background-color : black;
+
+          {
+          % elif current_phase=='02' %
+        }
+
+        background-color : navy;
+
+          {
+          % elif current_phase=='03' %
+        }
+
+        background-color : purple;
+
+          {
+          % elif current_phase=='04' %
+        }
+
+        background-color : gray;
+
+          {
+          % elif current_phase=='05' %
+        }
+
+        background-color : white;
+
+          {
+          % endif %
+        }
+      }
+
+      (function() {
+          var isChrome=/chrome/i.test(navigator.userAgent) && !/edge|edg|opr|brave/i.test(navigator.userAgent);
+
+          if ( !isChrome) {
+            document.body.innerHTML='<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;font-size:2em;">Please use Chrome. Other browsers soon!</div>';
+            document.body.style.overflow='hidden';
+          }
+
+        })();
     </style>
     {% block head %}
     {% endblock head %}
