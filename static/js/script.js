@@ -16,6 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
    });
   },
+  onTouch: function (el) {
+   // Add touch support for mobile devices
+   document.querySelectorAll(".stacked-cards video").forEach((video) => {
+    if (video.parentElement === el) {
+     video.controls = true;
+     video.parentElement.classList.add("active");
+    } else {
+     video.controls = false;
+     video.pause();
+     video.parentElement.classList.remove("active");
+    }
+   });
+  },
  });
  stackedCardSlide.init();
  // Accordion Logic
@@ -32,9 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
   phaseSelectionContainer.style.removeProperty("margin");
   phaseSelectionContainer.style.removeProperty("display");
  }
- // Video Controls Logic
+ // Video Controls Logic with touch support
  const videos = document.querySelectorAll(".video-slide");
  videos.forEach(function (video) {
+  // Mouse events
   video.addEventListener("mouseover", function () {
    if (video.closest("li").classList.contains("active")) {
     video.setAttribute("controls", "controls");
@@ -47,6 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
     video.removeAttribute("controls");
    }
   });
+  
+  // Touch events for mobile
+  video.addEventListener("touchstart", function (e) {
+   if (video.closest("li").classList.contains("active")) {
+    video.setAttribute("controls", "controls");
+   }
+  }, { passive: true });
+  
   video.addEventListener("play", function () {
    document.querySelectorAll(".video-slide").forEach((v) => {
     if (v !== video) {
@@ -62,6 +84,16 @@ document.addEventListener("DOMContentLoaded", function () {
    video.removeAttribute("controls");
   });
  });
+ 
+ // Add touch support to stacked cards container
+ const stackedCardsContainer = document.querySelector(".stacked-cards");
+ if (stackedCardsContainer) {
+  stackedCardsContainer.addEventListener("touchstart", function(e) {
+   // Enable pointer events on touch devices
+   e.currentTarget.style.pointerEvents = "auto";
+  }, { passive: true });
+ }
+ 
  // Update current year
  const currentYearElement = document.getElementById("currentYear");
  if (currentYearElement) {

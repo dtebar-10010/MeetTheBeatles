@@ -31,6 +31,10 @@
  left            : 50%;
  transform       : translateX(-50%);
  overflow        : hidden;
+ touch-action    : manipulation;
+ -webkit-tap-highlight-color: transparent;
+ user-select     : none;
+ -webkit-user-select: none;
 
 }
 
@@ -41,6 +45,8 @@
  max-width     : 100%;
  border-radius : 0.5rem;
  object-fit    : cover;
+ pointer-events: auto;
+ touch-action  : manipulation;
 
 }
 

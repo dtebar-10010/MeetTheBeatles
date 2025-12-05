@@ -33,6 +33,7 @@
     <link rel="apple-touch-icon" href="{% static 'imgs/icons/favicon.png' %}">
     <!-- Firefox-specific CSS loader - only loads firefox-fixes.css in Firefox -->
     <script src="{% static 'js/firefox-loader.js' %}"></script>
+    <!-- DEBUG: current_phase = {{ current_phase }} -->
     <style>
       @font-face {
         font-family: 'Bootle';
@@ -44,87 +45,44 @@
       }
 
       body {
-          {
-          % if current_phase=='01' %
-        }
-
-        background-image : url('/media/01/first_era-background.jpg');
-
-          {
-          % elif current_phase=='02' %
-        }
-
-        background-image : url('/media/02/second_era-background.jpg');
-
-          {
-          % elif current_phase=='03' %
-        }
-
-        background-image : url('/media/03/third_era-background.jpg');
-
-          {
-          % elif current_phase=='04' %
-        }
-
-        background-image : url('/media/04/fourth_era-background.jpg');
-
-          {
-          % elif current_phase=='05' %
-        }
-
-        background-image : url('/media/05/fifth_era-background.jpg');
-
-          {
-          % endif %
-        }
+        {% if current_phase == '01' %}
+        background-image: url('/media/01/first_era-background.jpg');
+        {% elif current_phase == '02' %}
+        background-image: url('/media/02/second_era-background.jpg');
+        {% elif current_phase == '03' %}
+        background-image: url('/media/03/third_era-background.jpg');
+        {% elif current_phase == '04' %}
+        background-image: url('/media/04/fourth_era-background.jpg');
+        {% elif current_phase == '05' %}
+        background-image: url('/media/05/fifth_era-background.jpg');
+        {% endif %}
       }
 
       .stacked-cards li.slide {
-          {
-          % if current_phase=='01' %
-        }
-
-        background-color : black;
-
-          {
-          % elif current_phase=='02' %
-        }
-
-        background-color : navy;
-
-          {
-          % elif current_phase=='03' %
-        }
-
-        background-color : purple;
-
-          {
-          % elif current_phase=='04' %
-        }
-
-        background-color : gray;
-
-          {
-          % elif current_phase=='05' %
-        }
-
-        background-color : white;
-
-          {
-          % endif %
-        }
+        {% if current_phase == '01' %}
+        background-color: black;
+        {% elif current_phase == '02' %}
+        background-color: navy;
+        {% elif current_phase == '03' %}
+        background-color: purple;
+        {% elif current_phase == '04' %}
+        background-color: gray;
+        {% elif current_phase == '05' %}
+        background-color: white;
+        {% endif %}
       }
+    </style>
+    <script>
+        (function() {
+            var isChrome = /chrome/i.test(navigator.userAgent) && !/edge|edg|opr|brave/i.test(navigator.userAgent);
 
-      (function() {
-          var isChrome=/chrome/i.test(navigator.userAgent) && !/edge|edg|opr|brave/i.test(navigator.userAgent);
-
-          if ( !isChrome) {
-            document.body.innerHTML='<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;font-size:2em;">Please use Chrome. Other browsers soon!</div>';
-            document.body.style.overflow='hidden';
-          }
+            if (!isChrome) {
+                document.body.innerHTML = '<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;font-size:2em;">Please use Chrome. Other browsers soon!</div>';
+                document.body.style.overflow = 'hidden';
+            }
 
         })();
-    </style>
+    </script>
     {% block head %}
     {% endblock head %}
   </head>
