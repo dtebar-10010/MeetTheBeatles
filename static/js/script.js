@@ -85,13 +85,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
  });
  
- // Add touch support to stacked cards container
+ // Add touch support to stacked cards container and individual cards
  const stackedCardsContainer = document.querySelector(".stacked-cards");
  if (stackedCardsContainer) {
-  stackedCardsContainer.addEventListener("touchstart", function(e) {
-   // Enable pointer events on touch devices
-   e.currentTarget.style.pointerEvents = "auto";
-  }, { passive: true });
+  // Ensure touch events work on cards
+  const cards = document.querySelectorAll(".stacked-cards li");
+  cards.forEach(function(card) {
+   card.addEventListener("touchend", function(e) {
+    // Only trigger if not interacting with active video
+    const isActiveCard = card.classList.contains("active");
+    const touchedVideo = e.target.closest("video");
+    
+    if (!isActiveCard || !touchedVideo) {
+     // Prevent default and trigger click for card navigation
+     e.preventDefault();
+     e.stopPropagation();
+     card.click();
+    }
+   }, { passive: false });
+  });
  }
  
  // Update current year

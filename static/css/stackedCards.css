@@ -45,9 +45,13 @@
  max-width     : 100%;
  border-radius : 0.5rem;
  object-fit    : cover;
- pointer-events: auto;
+ pointer-events: none;
  touch-action  : manipulation;
 
+}
+
+.stacked-cards li.active video{
+ pointer-events: auto;
 }
 
 .stacked-cards li.active{
