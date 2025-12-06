@@ -93,11 +93,9 @@ footer a {
  transition: border-color 0.5s ease-in-out;
 }
 
-/*.header-title {
-z-index: 9999 !important;
-background: rgba(255,255,0,0.2) !important;
-border: 2px dashed red !important;
-}*/
+.header-title {
+margin: top 12px !important;
+}
 
 .overlay {
   font-family: 'Bootle', sans-serif !important;
@@ -106,7 +104,7 @@ border: 2px dashed red !important;
   margin: 0px;
   padding: 0px;
   top: 6px  !important;
-  left: -6px !important;
+  left: 6px !important;
   /*width: 100% !important;
   height: 100% !important;*/
 }
