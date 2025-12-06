@@ -6,17 +6,6 @@
  */
 
 (function () {
-    /**
-     * Chrome-only site blocker
-     * Displays a blocking message in non-Chrome browsers (including Firefox)
-     */
-    function enforceChromeOnly() {
-        var isChrome = /chrome/i.test(navigator.userAgent) && !/edge|edg|opr|brave|firefox/i.test(navigator.userAgent);
-        if (!isChrome) {
-            document.body.innerHTML = '<div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;font-size:2em;">Please Chrome. Other browsers soon!</div>';
-            document.body.style.overflow = 'hidden';
-        }
-    }
     'use strict';
 
     /**
@@ -210,8 +199,6 @@
      * Initialize on DOM ready
      */
     function init() {
-        // Enforce Chrome-only access
-        enforceChromeOnly();
         // Only proceed if Firefox
         if (isFirefox()) {
             loadFirefoxCSS();

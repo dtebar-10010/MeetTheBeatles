@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
    updateTextContainerBorder();
   });
  });
+
 });
 
 // Function to check if the device is mobile (Android or iOS)
