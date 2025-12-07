@@ -531,6 +531,7 @@
   font-size : 9px !important;
  }
 }
+
 /* --------- 667PX WIDTH DEVICES (LANDSCAPE) --------- */
 @media (max-width : 667px) and (orientation : landscape) {
  body {
@@ -712,6 +713,85 @@
   top      : -36px !important;
  }
 }
+@media (width: 540px) and (height: 720px) {
+      body {
+       overflow-x : hidden !important;
+      }
+     
+      /* Header title */
+      .header-title {
+       font-size : 3vw !important;
+       top       : 1.5%;
+       margin-top: 11px;
+      }
+     
+      /* Cards adjustment */
+      .stacked-cards {
+       transform  : translateY(-63%) !important;
+       width      : 90vw !important;
+       max-width  : 90vw !important;
+       box-sizing : border-box !important;
+       margin     : 0 auto !important;
+      }
+     
+      .stacked-cards li {
+       width        : 50% !important;
+       aspect-ratio : 16/9;
+       overflow     : hidden;
+       padding      : 0;
+      }
+     
+      .stacked-cards li video {
+       width      : 100%;
+       height     : 100%;
+       object-fit : cover;
+      }
+     
+      /* Phase buttons */
+      #phase-selection-container {
+         display         : flex !important;
+         justify-content : center !important;
+         align-items     : center !important;
+         flex            : 0 0 100% !important;
+         max-width       : 100% !important;
+         width           : 100% !important;
+         margin          : 0 auto !important;
+         float           : none !important;
+         left            : 50% !important;
+         transform       : translate(-50%, -27vh) !important;
+        }
+     
+      #phase-selection-container .btn-group {
+       gap : 5px;
+      }
+     
+      #phase-selection-container .btn-group .btn {
+       /* Removed width, min-width, and max-width for Firefox JS fix */
+       height    : 25px !important;
+       font-size : 12px !important;
+       padding   : 0.1em;
+      }
+     
+      /* Text container */
+      .text-container {
+         width      : 90vw !important;
+         max-width  : 90vw !important;
+         height: 100% !important;
+         box-sizing : border-box !important;
+         margin     : 5px auto 0 !important;
+         transform  : translate(0%, -23vh) !important;
+        }
+     
+      .text-container p {
+       font-size : 11px !important;
+      }
+      /* Footer adjustments */
+      footer {
+       position : relative !important;
+       top      : -27px !important;
+       left     : 27px !important;
+      }
+     }
 
 /* --------- 430PX WIDTH DEVICES --------- */
 @media (max-width : 430px) {
@@ -884,3 +964,66 @@
   margin     : 5px auto 0 !important;
  }
 }
+/* --------- GALAXY Z FOLD 5 - COVER SCREEN (FOLDED) --------- */
+@media (max-width : 344px) {
+ body {
+  overflow-x : hidden !important;
+ }
+
+ .header-title {
+  font-size : 7vw !important;
+  margin-top: 11px;
+ }
+
+ .stacked-cards {
+  width      : 90vw !important;
+  box-sizing : border-box !important;
+  margin     : 0 auto !important;
+  transform: (-50%, -50vh) !important;
+ }
+
+ .stacked-cards li {
+  width        : 85% !important;
+  aspect-ratio : 16/9;
+  overflow     : hidden;
+  padding      : 0;
+ }
+
+ .stacked-cards li video {
+  width      : 100%;
+  height     : 100%;
+  object-fit : cover;
+ }
+ .overlay {
+  padding       : 2px 4px !important;
+  font-size     : x-small !important;
+  word-wrap     : break-word !important;
+  overflow-wrap : break-word !important;
+  white-space   : normal !important;
+  box-sizing    : border-box !important;
+ }
+
+ #phase-selection-container {
+  width      : 90vw !important;
+  box-sizing : border-box !important;
+  margin     : 0 auto !important;
+  margin-top: 33px !important;
+  /*transform: (-50%, -70vh) !important;*/
+ }
+
+ #phase-selection-container .btn-group .btn {
+  width     : 60px;
+  height    : 22px !important;
+  font-size : 10px !important;
+ }
+
+ .text-container {
+  max-height : 20% !important;
+  min-height : 80px !important;
+  width      : 90vw !important;
+  max-width  : 90vw !important;
+  box-sizing : border-box !important;
+  margin     : 5px auto 0 !important;
+ }
+}
+
