@@ -1,4 +1,3 @@
-    // ...history-entry JS reverted...
 /**
  * Firefox-specific CSS loader
  * Detects Firefox browser and loads firefox-fixes.css
@@ -8,15 +7,30 @@
 (function () {
     'use strict';
 
+    // Cache Firefox detection result
+    var _isFirefoxCached = null;
+
     /**
      * Detect if browser is Firefox
      * @returns {boolean} true if Firefox, false otherwise
      */
     function isFirefox() {
-    // console.log('Firefox detection: Forced TRUE for debugging');
-    // return true;
-    // Uncomment below for real detection:
-    return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+        if (_isFirefoxCached !== null) {
+            return _isFirefoxCached;
+        }
+
+        var ua = navigator.userAgent.toLowerCase();
+        // Check user agent for 'firefox' or 'gecko' with Firefox version
+        var uaCheck = ua.indexOf('firefox') > -1;
+        // Check for Firefox-specific CSS property support
+        var cssCheck = CSS.supports('-moz-appearance', 'none');
+        
+        _isFirefoxCached = uaCheck || cssCheck;
+        
+        console.log('User Agent:', ua);
+        console.log('Firefox detected:', _isFirefoxCached);
+        
+        return _isFirefoxCached;
     }
 
     /**
@@ -31,6 +45,21 @@
         document.head.appendChild(link);
         document.body.setAttribute('data-browser', 'firefox');
         console.log('firefox-fixes.css loaded');
+    }
+
+    /**
+     * Disable mediaQueries-v2.css for Firefox
+     * Finds and disables the link element to prevent conflicts
+     */
+    function disableMediaQueriesV2() {
+        var links = document.querySelectorAll('link[rel="stylesheet"]');
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].href && links[i].href.indexOf('mediaQueries-v2.css') > -1) {
+                links[i].disabled = true;
+                console.log('mediaQueries-v2.css disabled for Firefox');
+                break;
+            }
+        }
     }
 
     /**
@@ -127,14 +156,14 @@
         stackedCards.style.justifyContent = '';
         stackedCards.style.alignItems = '';
         stackedCards.style.boxSizing = 'border-box';
-        // Debug output
-        if (window.console) {
-            console.log('[Firefox stacked-cards] viewportHeight:', viewportHeight);
-            console.log('[Firefox stacked-cards] cardsHeight:', cardsHeight);
-            console.log('[Firefox stacked-cards] percent:', percent);
-            console.log('[Firefox stacked-cards] offset:', offset);
-            console.log('[Firefox stacked-cards] top applied:', stackedCards.style.top);
-        }
+        // Debug output - COMMENTED OUT
+        // if (window.console) {
+        //     console.log('[Firefox stacked-cards] viewportHeight:', viewportHeight);
+        //     console.log('[Firefox stacked-cards] cardsHeight:', cardsHeight);
+        //     console.log('[Firefox stacked-cards] percent:', percent);
+        //     console.log('[Firefox stacked-cards] offset:', offset);
+        //     console.log('[Firefox stacked-cards] top applied:', stackedCards.style.top);
+        // }
     }
 
     // Call on DOM ready, window resize, and orientation change
@@ -143,9 +172,10 @@
             // Always get the latest percent value
             var percent = getStackedCardsPercent();
             positionStackedCardsMidpoint(percent);
-            if (window.console) {
-                console.log('Firefox stacked-cards percent:', percent);
-            }
+            // Debug output - COMMENTED OUT
+            // if (window.console) {
+            //     console.log('Firefox stacked-cards percent:', percent);
+            // }
         }
         updatePosition();
         window.addEventListener('resize', updatePosition);
@@ -201,6 +231,7 @@
     function init() {
         // Only proceed if Firefox
         if (isFirefox()) {
+            disableMediaQueriesV2();
             loadFirefoxCSS();
             logScreenInfo();
             // Apply positioning fix after everything loads
