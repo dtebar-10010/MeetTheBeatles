@@ -1614,7 +1614,7 @@
          margin          : 0 auto !important;
          height          : 33vh !important;
          margin-bottom   : 3px !important;
-         transform       : translateY(-43vh) !important;
+         transform       : translateY(-29vh) !important;
         }
       .stacked-cards li {
        width        : 50% !important;
@@ -1640,7 +1640,7 @@
          margin          : 0 auto !important;
          float           : none !important;
          left            : 50% !important;
-         transform       : translate(-50%, 7.3vh) !important;
+         transform       : translate(-50%, -9.9vh) !important;
         }
      
       #phase-selection-container .btn-group {
@@ -1649,29 +1649,30 @@
      
       #phase-selection-container .btn-group .btn {
        /* Removed width, min-width, and max-width for Firefox JS fix */
-       height    : 15px !important;
+       height    : 18px !important;
        font-size : 9px !important;
        padding   : 0.03em;
       }
      
       /* Text container */
       .text-container {
-         width      : 74vw !important;
-         max-width  : 74vw !important;
+         width      : 81vw !important;
+         max-width  : 81vw !important;
          box-sizing : border-box !important;
          margin     : 3px auto 0 !important;
-         max-height: 24px !important;
-         transform  : translate(0%, 7vh) !important;
+         height: 277px !important;
+         max-height: 277px !important;
+         transform  : translate(0%, -2vh) !important;
         }
      
       .text-container p {
-       font-size : 8px !important;
+       font-size : 12px !important;
       }
    
       /* Footer adjustments */
       footer {
        position   : relative !important;
-       top        : 13px !important;
+       top        : -4px !important;
        left       : 50% !important;
        transform  : translateX(-97%) !important;
        text-align : center !important;
