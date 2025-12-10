@@ -1502,3 +1502,189 @@
     margin     : 5px auto 0 !important;
    }
   }
+  @media (width: 882px) and (height: 344px) {
+      body {
+       overflow-x: hidden !important;
+      }
+      /* Header title */
+      .header-title {
+       font-size : 3vw !important;
+       top       : 1.5%;
+       margin-top: 7px;
+      }
+     
+      /* Cards adjustment */
+      .stacked-cards {
+         width           : 90vw !important;
+         max-width       : 90vw !important;
+         box-sizing      : border-box !important;
+         margin          : 0 auto !important;
+         height          : 33vh !important;
+         margin-bottom   : 3px !important;
+         transform       : translateY(-43vh) !important;
+        }
+      .stacked-cards li {
+       width        : 50% !important;
+       aspect-ratio : 16/9;
+       overflow     : hidden;
+       padding      : 0;
+      }
+     
+      .stacked-cards li video {
+       width      : 100%;
+       height     : 100%;
+       object-fit : cover;
+      }
+     
+      /* Phase buttons */
+      #phase-selection-container {
+         display         : flex !important;
+         justify-content : center !important;
+         align-items     : center !important;
+         flex            : 0 0 100% !important;
+         max-width       : 100% !important;
+         width           : 100% !important;
+         margin          : 0 auto !important;
+         float           : none !important;
+         left            : 50% !important;
+         transform       : translate(-50%, 7.3vh) !important;
+        }
+     
+      #phase-selection-container .btn-group {
+       gap : 5px;
+      }
+     
+      #phase-selection-container .btn-group .btn {
+       /* Removed width, min-width, and max-width for Firefox JS fix */
+       height    : 15px !important;
+       font-size : 9px !important;
+       padding   : 0.03em;
+      }
+     
+      /* Text container */
+      .text-container {
+         width      : 74vw !important;
+         max-width  : 74vw !important;
+         box-sizing : border-box !important;
+         margin     : 3px auto 0 !important;
+         max-height: 24px !important;
+         transform  : translate(0%, 7vh) !important;
+        }
+     
+      .text-container p {
+       font-size : 8px !important;
+      }
+   
+      /* Footer adjustments */
+      footer {
+       position   : relative !important;
+       top        : 13px !important;
+       left       : 50% !important;
+       transform  : translateX(-97%) !important;
+       text-align : center !important;
+      }
+   
+      /* Rotation prompt adjustments */
+      #mobile-rotation-prompt {
+       position : relative !important;
+       top      : -27px !important;
+      }
+   
+      .rotation-text {
+       position : relative !important;
+       top      : -27px !important;
+      }
+     }
+     @media (width: 829px) and (height: 690px) {
+      body {
+       overflow-x: hidden !important;
+      }
+      /* Header title */
+      .header-title {
+       font-size : 3vw !important;
+       top       : 1.5%;
+       margin-top: 7px;
+      }
+     
+      /* Cards adjustment */
+      .stacked-cards {
+         width           : 90vw !important;
+         max-width       : 90vw !important;
+         box-sizing      : border-box !important;
+         margin          : 0 auto !important;
+         height          : 33vh !important;
+         margin-bottom   : 3px !important;
+         transform       : translateY(-43vh) !important;
+        }
+      .stacked-cards li {
+       width        : 50% !important;
+       aspect-ratio : 16/9;
+       overflow     : hidden;
+       padding      : 0;
+      }
+     
+      .stacked-cards li video {
+       width      : 100%;
+       height     : 100%;
+       object-fit : cover;
+      }
+     
+      /* Phase buttons */
+      #phase-selection-container {
+         display         : flex !important;
+         justify-content : center !important;
+         align-items     : center !important;
+         flex            : 0 0 100% !important;
+         max-width       : 100% !important;
+         width           : 100% !important;
+         margin          : 0 auto !important;
+         float           : none !important;
+         left            : 50% !important;
+         transform       : translate(-50%, 7.3vh) !important;
+        }
+     
+      #phase-selection-container .btn-group {
+       gap : 5px;
+      }
+     
+      #phase-selection-container .btn-group .btn {
+       /* Removed width, min-width, and max-width for Firefox JS fix */
+       height    : 15px !important;
+       font-size : 9px !important;
+       padding   : 0.03em;
+      }
+     
+      /* Text container */
+      .text-container {
+         width      : 74vw !important;
+         max-width  : 74vw !important;
+         box-sizing : border-box !important;
+         margin     : 3px auto 0 !important;
+         max-height: 24px !important;
+         transform  : translate(0%, 7vh) !important;
+        }
+     
+      .text-container p {
+       font-size : 8px !important;
+      }
+   
+      /* Footer adjustments */
+      footer {
+       position   : relative !important;
+       top        : 13px !important;
+       left       : 50% !important;
+       transform  : translateX(-97%) !important;
+       text-align : center !important;
+      }
+   
+      /* Rotation prompt adjustments */
+      #mobile-rotation-prompt {
+       position : relative !important;
+       top      : -27px !important;
+      }
+   
+      .rotation-text {
+       position : relative !important;
+       top      : -27px !important;
+      }
+     }
