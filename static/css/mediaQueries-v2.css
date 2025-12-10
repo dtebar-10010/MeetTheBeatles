@@ -126,9 +126,11 @@
    }
    /* Footer adjustments */
    footer {
-    position : relative !important;
-    top      : -27px !important;
-    left     : 27px !important;
+    position   : relative !important;
+    top        : -27px !important;
+    left       : 50% !important;
+    transform  : translateX(-50%) !important;
+    text-align : center !important;
    }
   }
   @media (width: 1024px) and (height: 600px) {
@@ -205,9 +207,11 @@
    }
    /* Footer adjustments */
    footer {
-    position : relative !important;
-    top      : -27px !important;
-    left     : 27px !important;
+    position   : relative !important;
+    top        : -27px !important;
+    left       : 50% !important;
+    transform  : translateX(-50%) !important;
+    text-align : center !important;
    }
   }
   @media (width: 1280px) and (height: 800px) {
@@ -284,9 +288,11 @@
    }
    /* Footer adjustments */
    footer {
-    position : relative !important;
-    top      : -27px !important;
-    left     : 27px !important;
+    position   : relative !important;
+    top        : -27px !important;
+    left       : 50% !important;
+    transform  : translateX(-50%) !important;
+    text-align : center !important;
    }
   }
 /* --------- MEDIUM TABLETS (LANDSCAPE) --------- */
@@ -374,7 +380,73 @@
   font-size : 7px !important;
  }
 }
-
+@media (max-width : 884px) and (orientation : landscape) {
+   body {
+    overflow-x: hidden !important;
+   }
+   /* Header title */
+   .header-title {
+    font-size : 3vw !important;
+    top       : 1.5%;
+    margin-top: 11px;
+   }
+  
+   /* Cards adjustment */
+   .stacked-cards {
+    transform  : translateY(-5%) !important;
+    width      : 90vw !important;
+    max-width  : 90vw !important;
+    box-sizing : border-box !important;
+    margin     : 0 auto !important;
+   }
+  
+   .stacked-cards li {
+    width        : 50% !important;
+    aspect-ratio : 16/9;
+    overflow     : hidden;
+    padding      : 0;
+   }
+  
+   .stacked-cards li video {
+    width      : 100%;
+    height     : 100%;
+    object-fit : cover;
+   }
+  
+   /* Phase buttons */
+   #phase-selection-container {
+    margin-top : -3px !important;
+   }
+  
+   #phase-selection-container .btn-group {
+    gap : 5px;
+   }
+  
+   #phase-selection-container .btn-group .btn {
+    /* Removed width, min-width, and max-width for Firefox JS fix */
+    height    : 25px !important;
+    font-size : 12px !important;
+    padding   : 0.1em;
+   }
+  
+   /* Text container */
+   .text-container {
+    max-height : 80px !important;
+    min-height : 80px !important;
+    width      : 90vw !important;
+    max-width  : 90vw !important;
+    border     : 3px solid transparent;
+    padding    : 5px;
+    margin-top : 20px !important;
+    box-sizing : border-box !important;
+    margin-left : auto !important;
+    margin-right : auto !important;
+   }
+  
+   .text-container p {
+    font-size : 9px !important;
+   }
+  }
 /* --------- SMALL TABLETS (LANDSCAPE) --------- */
 @media (max-width : 768px) and (orientation : landscape) {
  body {
@@ -517,8 +589,11 @@
 
    /* Footer adjustments */
    footer {
-    position : relative !important;
-    top      : -27px !important;
+    position   : relative !important;
+    top        : -27px !important;
+    left       : 50% !important;
+    transform  : translateX(-50%) !important;
+    text-align : center !important;
    }
 
    /* Rotation prompt adjustments */
@@ -606,19 +681,11 @@
 
    /* Footer adjustments */
    footer {
-    position : relative !important;
-    top      : -27px !important;
-   }
-
-   /* Rotation prompt adjustments */
-   #mobile-rotation-prompt {
-    position : relative !important;
-    top      : -27px !important;
-   }
-
-   .rotation-text {
-    position : relative !important;
-    top      : -27px !important;
+    position   : relative !important;
+    top        : -27px !important;
+    left       : 50% !important;
+    transform  : translateX(-50%) !important;
+    text-align : center !important;
    }
   }
 @media (max-width : 740px) and (orientation : landscape) {
@@ -945,9 +1012,11 @@
       }
       /* Footer adjustments */
       footer {
-       position : relative !important;
-       top      : -27px !important;
-       left     : 27px !important;
+       position   : relative !important;
+       top        : -27px !important;
+       left       : 50% !important;
+       transform  : translateX(-50%) !important;
+       text-align : center !important;
       }
      }
 
@@ -1062,10 +1131,9 @@
  footer {
   position   : relative !important;
   top        : -27px !important;
+  left       : 50% !important;
+  transform  : translateX(-50%) !important;
   text-align : center !important;
-  left       : 0 !important;
-  right      : 0 !important;
-  padding-left : 0 !important;
  }
 
  footer a {
@@ -1139,10 +1207,9 @@
    footer {
     position   : relative !important;
     top        : -27px !important;
+    left       : 50% !important;
+    transform  : translateX(-50%) !important;
     text-align : center !important;
-    left       : 0 !important;
-    right      : 0 !important;
-    padding-left : 0 !important;
    }
 
    footer a {
@@ -1211,8 +1278,109 @@
   margin     : 5px auto 0 !important;
  }
 }
+
+/* --------- iPhone SE and similar (375px × 667px) --------- */
+@media (width: 375px) and (height: 667px) {
+ body {
+  overflow-x : hidden !important;
+ }
+
+ .header-title {
+  font-size  : 7vw !important;
+  margin-top : 11px;
+ }
+
+ .stacked-cards {
+  width         : 90vw !important;
+  max-width     : 90vw !important;
+  box-sizing    : border-box !important;
+  margin        : 0 auto !important;
+  height        : 50vh !important;
+  margin-bottom : 3px !important;
+  transform     : translateY(-33vh) !important;
+ }
+
+ .stacked-cards li {
+  width        : 85% !important;
+  aspect-ratio : 16/9;
+  overflow     : hidden;
+  padding      : 0;
+ }
+
+ #phase-selection-container {
+  display         : flex !important;
+  justify-content : center !important;
+  align-items     : center !important;
+  flex            : 0 0 100% !important;
+  max-width       : 100% !important;
+  width           : 100% !important;
+  margin          : 0 auto !important;
+  float           : none !important;
+  left            : 50% !important;
+  transform       : translate(-50%, -33vh) !important;
+ }
+
+ .text-container {
+  width      : 90vw !important;
+  max-width  : 90vw !important;
+  box-sizing : border-box !important;
+  margin     : 5px auto 0 !important;
+  max-height: 137px !important;
+  transform  : translate(0%, -23vh) !important;
+ }
+}
+@media (width: 360px) and (height: 740px) {
+   body {
+    overflow-x : hidden !important;
+   }
+  
+   .header-title {
+    font-size  : 7vw !important;
+    margin-top : 11px;
+   }
+  
+   .stacked-cards {
+    width         : 90vw !important;
+    max-width     : 90vw !important;
+    box-sizing    : border-box !important;
+    margin        : 0 auto !important;
+    height        : 50vh !important;
+    margin-bottom : 3px !important;
+    transform     : translateY(-33vh) !important;
+   }
+  
+   .stacked-cards li {
+    width        : 85% !important;
+    aspect-ratio : 16/9;
+    overflow     : hidden;
+    padding      : 0;
+   }
+  
+   #phase-selection-container {
+    display         : flex !important;
+    justify-content : center !important;
+    align-items     : center !important;
+    flex            : 0 0 100% !important;
+    max-width       : 100% !important;
+    width           : 100% !important;
+    margin          : 0 auto !important;
+    float           : none !important;
+    left            : 50% !important;
+    transform       : translate(-50%, -33vh) !important;
+   }
+  
+   .text-container {
+    width      : 90vw !important;
+    max-width  : 90vw !important;
+    box-sizing : border-box !important;
+    margin     : 5px auto 0 !important;
+    max-height: 137px !important;
+    transform  : translate(0%, -23vh) !important;
+   }
+  }
+  
 /* --------- GALAXY Z FOLD 5 - COVER SCREEN (FOLDED) --------- */
-@media (max-width : 344px) {
+@media (max-width : 344px) and (height: 882px) {
  body {
   overflow-x : hidden !important;
  }
@@ -1265,10 +1433,10 @@
  }
 
  .text-container {
-  max-height : 20% !important;
   min-height : 80px !important;
   width      : 90vw !important;
   max-width  : 90vw !important;
+  max-height: 137px !important;
   box-sizing : border-box !important;
   margin     : 5px auto 0 !important;
  }
