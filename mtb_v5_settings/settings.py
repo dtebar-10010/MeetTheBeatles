@@ -180,3 +180,28 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # EMAIL_HOST_PASSWORD = 'qjjw mcay bqgi vvbt'
 # EMAIL_USE_TLS = True
 # DEFAULT_FROM_EMAIL = 'dtebar@top-quarks.com'
+
+# Logging configuration to suppress broken pipe errors
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'suppress_broken_pipe': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda record: 'Broken pipe' not in record.getMessage()
+        }
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'filters': ['suppress_broken_pipe'],
+        },
+    },
+    'loggers': {
+        'django.server': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}

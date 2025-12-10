@@ -1374,6 +1374,7 @@
     max-width  : 90vw !important;
     box-sizing : border-box !important;
     margin     : 5px auto 0 !important;
+    height: 137px !important;
     max-height: 137px !important;
     transform  : translate(0%, -23vh) !important;
    }
