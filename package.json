@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "prettier-plugin-django-alpine": "^1.3.0"
+  }
+}
